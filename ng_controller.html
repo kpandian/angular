@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<script src="js/angular.min.js"></script>
+<body  ng-app="myApp">
+
+<div ng-controller="myCtrl">
+{{ firstName + " " + lastName }}
+</div>
+
+<div ng-controller="myCtrl1">
+<input type="text" ng-model="age">
+<h3>{{age}}</h3>
+<h1>{{details}}</h1>
+</div>
+
+<script>
+var app = angular.module("myApp", []);
+app.controller("myCtrl", function($scope) {
+    $scope.firstName = "name1";
+    $scope.lastName = "name2";
+});
+
+app.controller("myCtrl1", function($scope) {
+    $scope.age = "11";
+   $scope.details = $scope.age;
+});
+
+</script>
+
+</body>
+</html>
