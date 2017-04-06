@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Using a Service</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body ng-app="myServiceModule">
+<div id="simple" ng-controller="serviceController">
+    <h3>{{test}}</h3>
+    <p>Click three times to see an alert...!!</p>
+    <input type="text" ng-init="message='testmessage'" ng-model="message">
+    <button ng-click="clickToSee(message)">Notify</button>
+</div>
+<div id="simple" ng-controller="serviceController2">
+    <h3>{{test}}</h3>
+    <p>Click three times to see an alert...!!</p>
+    <input type="text" ng-init="message='testmessage'" ng-model="message">
+    <button ng-click="clickToSee(message)">Notify</button>
+</div>
+</body>
+</html>

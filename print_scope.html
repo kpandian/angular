@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Print_scope</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/print_scope_script.js"></script>
+</head>
+<body ng-app="myApp">
+<h1> Go to console to see the $scope and $rootScope values</h1>
+<h1>Rootscope value  : {{counter}}</h1>
+<div id="mycontroller" ng-controller="myController">
+    <input type="text" ng-init="var1=10" ng-model="var1">
+    <input type="text" ng-init="var2=20" ng-model="var2">
+    <h3>(First object) Var1 : {{var1}}</h3>
+    <h3>(First object) Var2 : {{var2}}</h3>
+</div>
+<div id="mycontroller" ng-controller="myController">
+    <input type="text" ng-init="var1=101" ng-model="var1">
+    <input type="text" ng-init="var2=201" ng-model="var2">
+    <h3>(Second object) Var1 : {{var1}}</h3>
+    <h3>(Second object) Var2 : {{var2}}</h3>
+</div>
+</body>
+</html>
