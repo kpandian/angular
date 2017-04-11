@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Watch and Digest</title>
+    <script src="js/angular.min.js"></script>
+    <script type="text/javascript">
+        var myApp = angular.module("watchApp",[]);
+        myApp.controller("watchController",["$rootScope", "$scope", function($rootScope,$scope){
+            var scope = $rootScope;
+            scope.name = 'misko';
+            //$scope.name = scope.name;
+            scope.counter = 0;
+
+            //expect(scope.counter).toEqual(0);
+            scope.$watch('name', function(newValue, oldValue) {
+              scope.counter = scope.counter + 1;
+              console.log("Watch Counter : " + scope.counter);
+            });
+            //expect(scope.counter).toEqual(0);
+
+            //scope.$digest();
+            // the listener is always called during the first $digest loop after it was registered
+            //expect(scope.counter).toEqual(1);
+
+            //scope.$digest();
+            // but now it will not be called unless the value changes
+            //expect(scope.counter).toEqual(1);
+
+            scope.name = 'adam';
+            //$scope.name = scope.name;
+            //scope.$digest();
+            //expect(scope.counter).toEqual(2);
+        }]);
+    </script>
+</head>
+<body ng-app="watchApp">
+<div ng-controller="watchController">
+    {{name}}
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clock Script</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/updateTime.js"></script>
+</head>
+<body ng-app="clockApp">
+<div ng-controller="clockController">
+    <h3>This Script Will run the Clock for 5 seconds after that it will destroy the scope</h3>
+    <input type="text" ng-model="format"/>
+    <span my-current-time="format"></span>
+    <div my-template></div>
+</div>
+</body>
+</html>

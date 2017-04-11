@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boolean Binding</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/boolean_binding.js"></script>
+</head>
+<body ng-app="myApp">
+<div ng-controller="booleanController">
+<input type="checkbox" ng-model="isDisabled">
+<button ng-disabled="isDisabled">Disabled</button>
+</div>
+</body>
+</html>
