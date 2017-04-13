@@ -1,0 +1,6 @@
+Array
+(
+    [action] => login_action
+    [username] => admin1
+    [password] => pwd1
+)

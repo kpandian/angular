@@ -1,0 +1,58 @@
+create table nominee(n_id INT NOT NULL AUTO_INCREMENT,n_name varchar(100) NOT NULL,n_status ENUM('0','1'),n_joined DATE,n_votes LONGINT null,n_position INT NULL, PRIMARY KEY(n_id));
+
+insert into org_users(ou_name,ou_pwd,ou_status,ou_joined) VALUES ('org1',md5('pwd1'),'1',CURDATE());
+insert into org_users(ou_name,ou_pwd,ou_status,ou_joined) VALUES ('org2',md5('pwd2'),'1',CURDATE());
+insert into org_users(ou_name,ou_pwd,ou_status,ou_joined) VALUES ('org3',md5('pwd3'),'0',CURDATE());
+insert into org_users(ou_name,ou_pwd,ou_status,ou_joined) VALUES ('org4',md5('pwd4'),'0',CURDATE());
+
++------------+---------------+------+-----+---------+----------------+
+| Field      | Type          | Null | Key | Default | Extra          |
++------------+---------------+------+-----+---------+----------------+
+| v_id       | int(11)       | NO   | PRI | NULL    | auto_increment |
+| v_name     | varchar(100)  | NO   |     | NULL    |                |
+| v_pwd      | varchar(100)  | NO   |     | NULL    |                |
+| v_status   | enum('0','1') | YES  |     | NULL    |                |
+| v_is_voted | enum('0','1') | YES  |     | NULL    |                |
+| v_joined   | date          | YES  |     | NULL    |                |
++------------+---------------+------+-----+---------+----------------+
+
+
+
+insert into voters(v_name,v_pwd,v_status,v_joined,v_is_voted) VALUES ('voter1',md5('pwd1'),'1',CURDATE(),'0'),
+('voter2',md5('pwd2'),'1',CURDATE(),'0'),
+('voter3',md5('pwd3'),'1',CURDATE(),'0'),
+('voter4',md5('pwd4'),'1',CURDATE(),'0'),
+('voter5',md5('pwd5'),'1',CURDATE(),'0'),
+('voter6',md5('pwd6'),'1',CURDATE(),'0'),
+('voter7',md5('pwd7'),'1',CURDATE(),'0'),
+('voter8',md5('pwd8'),'1',CURDATE(),'0'),
+('voter9',md5('pwd9'),'1',CURDATE(),'0'),
+('voter10',md5('pwd10'),'1',CURDATE(),'0'),
+('voter11',md5('pwd11'),'1',CURDATE(),'0'),
+('voter12',md5('pwd12'),'1',CURDATE(),'0'),
+('voter13',md5('pwd13'),'1',CURDATE(),'0'),
+('voter14',md5('pwd14'),'1',CURDATE(),'0'),
+('voter15',md5('pwd15'),'1',CURDATE(),'0'),
+('voter16',md5('pwd16'),'1',CURDATE(),'0'),
+('voter17',md5('pwd17'),'1',CURDATE(),'0'),
+('voter18',md5('pwd18'),'1',CURDATE(),'0'),
+('voter19',md5('pwd19'),'1',CURDATE(),'0');
+
+
++------------+---------------+------+-----+---------+----------------+
+| Field      | Type          | Null | Key | Default | Extra          |
++------------+---------------+------+-----+---------+----------------+
+| n_id       | int(11)       | NO   | PRI | NULL    | auto_increment |
+| n_name     | varchar(100)  | NO   |     | NULL    |                |
+| n_status   | enum('0','1') | YES  |     | NULL    |                |
+| n_joined   | date          | YES  |     | NULL    |                |
+| n_votes    | int(11)       | YES  |     | NULL    |                |
+| n_position | int(11)       | YES  |     | NULL    |                |
++------------+---------------+------+-----+---------+----------------+
+
+
+ALTER TABLE nominee
+ADD n_symbol VARCHAR(100) NOT NULL;
+
+
+insert into nominee(n_name,n_status,n_joined,n_symbol) VALUES ('nom1','1',CURDATE(),'img/nom1.png'),('nom2','1',CURDATE(),'img/nom2.png'),('nom3','1',CURDATE(),'img/nom3.png'),('nom4','1',CURDATE(),'img/nom4.png');

@@ -1,0 +1,15 @@
+<div id="login_container" ng-controller="loginController">
+<div id="lc_inner_box">
+    <div id="lc_left_box">
+    <img id="lc_logo" src="img/logo.png"/>
+        <span><b>POLL</b> MASTER</span>
+    </div>
+    <div id="lc_right_box">
+    <form>
+        <input placeholder="Username" class="input_text input_black_box" type="text" name="user" ng-model="user"/><br>
+        <input placeholder="Password" class="input_text input_black_box" type="password" name="pwd" ng-model="pwd"/><br>
+        <button id="submit_button" class="green_button" ng-click="authenticate_user()"><!--<a ui-sref="home">Sign In</a>--></button>
+    </form>
+    </div>
+</div>
+</div>

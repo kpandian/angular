@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Poll Master</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lalezar" rel="stylesheet">
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.js"></script>
+    <script>
+      document.write('<base href="'+ document.location.pathname +'" />')
+    </script>
+</head>
+<body ng-app="pollApp">
+<div class="main_container">
+    <div ui-view></div>
+
+     <!-- Modules -->
+    <script src="js/pollApp.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/loginController.js"></script>
+
+    <script src="js/controllers/homeController.js"></script>
+
+    <script src="js/controllers/adminController.js"></script>
+
+    <!-- Services -->
+    <script src="js/services/login.js"></script>
+
+    <!--<script src="js/services/login.js"></script>-->
+</div>
+</body>
+</html>
